@@ -9,10 +9,10 @@ from datetime import datetime
     catchup=False,
     tags=["smooth"],
 )
-def smooth()
+
+def smooth():
     video = SmoothOperator(
         task_id="youtube_video"
     )
-
 
 smooth()
