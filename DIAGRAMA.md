@@ -1,5 +1,6 @@
 # Diagrama da solução para entendimento visual dos componentes envolvidos.
 
+```
 +--------------------------------------------------+
 |                  Sistema de Integração           |
 |--------------------------------------------------|
@@ -41,8 +42,4 @@
 |                       +-----------+              |
 |                                                  |
 +--------------------------------------------------+
-
-
-# Versão cloud proposta
-
-![Proposição](diagrama.png)
+```

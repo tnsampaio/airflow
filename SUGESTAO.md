@@ -20,35 +20,10 @@ Para armazenamento de logs e arquivos de dados dos DAGs.
 
 # Diagrama de Arquitetura
 
-+---------------------------------------------------------------------+
-|                      Arquitetura AWS para Airflow                   |
-|---------------------------------------------------------------------|
-|                                                                     |
-|   +-------------+       +-------------+                             |
-|   |  Amazon RDS |       |  ElastiCache |                            |
-|   |  (Postgres) |       |   (Redis)    |                            |
-|   +-------------+       +-------------+                             |
-|         ^                    ^                                      |
-|         |                    |                                      |
-|  +--------------------+ +--------------------+                      |
-|  |    Amazon EKS      | |    Amazon EKS      |                      |
-|  |  (Airflow Pods)    | |  (Airflow Pods)    |                      |
-|  |  - Scheduler       | |  - Webserver       |                      |
-|  |  - Worker          | |  - Triggerer       |                      |
-|  |  - CLI             | |  - Flower          |                      |
-|  +--------------------+ +--------------------+                      |
-|                                                                     |
-|  +-------------------------------------------------------------+    |
-|  |                    Amazon S3                                |    |
-|  |  (Storage for DAGs, Logs, and other Data)                   |    |
-|  +-------------------------------------------------------------+    |
-|                                                                     |
-|  +-------------------------------------------------------------+    |
-|  |                    Amazon CloudWatch                         |    |
-|  |  (Monitoring and Logging)                                    |    |
-|  +-------------------------------------------------------------+    |
-|                                                                     |
-+---------------------------------------------------------------------+
+
+# Versão cloud proposta
+
+![Proposição](diagrama.png)
 
 ## Detalhamento dos Componentes
 
